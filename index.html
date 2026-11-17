@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spyridon Mouroutis</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Spyridon Mouroutis</h1>
+    <p class="subtitle">MEng in Electrical and Computer Engineering &bull; Technical University of Crete</p>
+    <div class="contact-links">
+      <a href="mailto:spmouroutis@gmail.com">spmouroutis@gmail.com</a>
+      <span class="sep">/</span>
+      <a href="https://github.com/SpyrosMouroutis" target="_blank">GitHub</a>
+      <span class="sep">/</span>
+      <a href="https://linkedin.com/in/your-profile" target="_blank">LinkedIn</a>
+      <span class="sep">/</span>
+      <span>+30 694 932 3223</span>
+      <span class="sep">/</span>
+      <a href="cv.pdf" target="_blank">CV (PDF)</a>
+
+    </div>
+    <nav class="top-nav">
+      <a href="#education">Education</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#conferences">Conferences</a>
+      <a href="#training">Training</a>
+      <a href="#competitions">Competitions</a>
+      <a href="#languages">Languages</a>
+      <span class="sep">|</span>
+      <a href="projects/index.html" class="active">All Projects (9) &rarr;</a>
+      <a href="ctfs/index.html" class="active">Detailed CTF Rankings &rarr;</a>
+    </nav>
+  </header>
+
+  <!-- 1. EDUCATION -->
+  <details id="education" class="section-block" open>
+    <summary>Education</summary>
+
+    <div class="timeline-row">
+      <div class="timeline-date">Sept 2022 –<br>Expected Jul 2027</div>
+      <div class="timeline-content">
+        <strong class="role">MEng in Electrical and Computer Engineering</strong>, <span class="org">Technical University of Crete</span><br>
+        <strong>Teams:</strong> IEEE TUC Student Branch, TUCSec (Cybersecurity Team)
+      </div>
+    </div>
+  </details>
+
+  <!-- 2. EXPERIENCE -->
+  <details id="experience" class="section-block" open>
+    <summary>Experience</summary>
+
+    <div class="timeline-row">
+      <div class="timeline-date">Jul 2026 –<br>Nov 2026</div>
+      <div class="timeline-content">
+        <strong class="role">Data &amp; AI (AI &amp; Quantitative Modelling) Advisory Intern</strong>, <span class="org">EY</span>
+        <ul class="timeline-bullets">
+          <li>Built CNN-based PDF page classifiers for the EY Global FSA AI Ingestion Platform, replacing costly VLM inference and eliminating recurring processing costs of $20 per 1,000 pages while achieving 97.6% macro ROC-AUC.</li>
+          <li>Contributed to the redesign of EY's FSA AI ingestion platform by developing ingestion workflows, metadata-driven processing pipelines, monitoring capabilities, and reproducible deployment patterns, reducing new datasource onboarding time from 11 weeks to 2–5 days.</li>
+          <li>Decoupled core processing modules from the FSA application code, generalizing the architecture into a reusable internal package to streamline cross-project code sharing and maintenance.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="timeline-row">
+      <div class="timeline-date">Feb 2026 –<br>Jun 2026</div>
+      <div class="timeline-content">
+        <strong class="role">Freelance Java &amp; Object-Oriented Programming Tutor</strong>
+        <ul class="timeline-bullets">
+          <li>Provided private 1:1 and group tutoring sessions for undergraduate engineering students in core Java and OOP concepts. Covered classes, inheritance, interfaces, and exception handling.</li>
+        </ul>
+      </div>
+    </div>
+  </details>
+
+  <!-- 3. PROJECTS -->
+  <details id="projects" class="section-block" open>
+    <summary>Projects</summary>
+
+    <div class="timeline-row">
+      <div class="timeline-date">Python · RLCard · PyTorch</div>
+      <div class="timeline-content">
+        <strong class="role"><a href="https://github.com/SpyrosMouroutis/Multi-Phase-Autonomous-Poker-Agent-Framework" target="_blank">Multi-Phase Autonomous Poker Agent Framework</a></strong> &mdash; developed a framework for training autonomous agents against heuristic and dynamic adversaries. Scaled algorithms from tabular Q-Learning (Leduc Poker) to Deep Q-Networks (DQN) for complex, high-dimensional state spaces (Heads-Up Limit Hold'em). Integrated self-play routines, baseline models, and an interactive testing interface.
+      </div>
+    </div>
+
+    <div class="timeline-row">
+      <div class="timeline-date">PySpark · FastAPI · Docker</div>
+      <div class="timeline-content">
+        <strong class="role"><a href="https://github.com/SpyrosMouroutis/NYC-Taxi-Fare-Prediction-Engine" target="_blank">NYC Taxi Fare Prediction Engine</a></strong> &mdash; developed an end-to-end machine learning pipeline to predict taxi fares using PySpark and MLlib. Implemented data cleaning and feature engineering, including One-Hot Encoding and temporal feature generation, achieving an R² score of 0.96. Deployed the model as a scalable microservice using FastAPI and Docker.
+      </div>
+    </div>
+
+    <div class="timeline-row">
+      <div class="timeline-date">ChromaDB · OpenAI · Sentence Transformers</div>
+      <div class="timeline-content">
+        <strong class="role"><a href="https://github.com/SpyrosMouroutis/PDF-RAG-Assistant" target="_blank">PDF RAG Assistant</a></strong> &mdash; engineered an end-to-end Retrieval-Augmented Generation (RAG) system for querying technical PDF repositories. Built an offline ingestion pipeline using PyMuPDF and Sentence Transformers to chunk documents and index embeddings in ChromaDB. Implemented hybrid retrieval combining dense vector similarity with BM25 sparse keyword search, with a decoupled FastAPI backend and Streamlit interface.
+      </div>
+    </div>
+
+    <div class="section-footer-link">
+      <a href="projects/index.html">Full project portfolio (9 projects) &rarr;</a>
+    </div>
+  </details>
+
+  <!-- 4. TOOLS & TECHNICAL SKILLS -->
+  <details id="skills" class="section-block" open>
+    <summary>Tools &amp; Technical Skills</summary>
+
+    <div class="kv-row">
+      <div class="kv-label">Programming Languages</div>
+      <div>Python, SQL, Java, C, Bash, VHDL, MIPS Assembly</div>
+    </div>
+    <div class="kv-row">
+      <div class="kv-label">Libraries &amp; Frameworks</div>
+      <div>PyTorch, FastAPI, PySpark, Apache Spark, Scikit-learn, Sentence Transformers, Pydantic, Streamlit, NumPy, Pandas, SciPy</div>
+    </div>
+    <div class="kv-row">
+      <div class="kv-label">Databases</div>
+      <div>PostgreSQL, ChromaDB, SQLite, SQL Server, MySQL</div>
+    </div>
+    <div class="kv-row">
+      <div class="kv-label">Software &amp; Tools</div>
+      <div>Git, GitHub, Docker, Wireshark, MATLAB, Webots, Gazebo</div>
+    </div>
+  </details>
+
+    <!-- 5. CONFERENCES -->
+  <details id="conferences" class="section-block" open>
+    <summary>Conferences</summary>
+
+    <div class="timeline-row">
+      <div class="timeline-date">Athens, Greece<br>Jul 2026</div>
+      <div class="timeline-content">
+        <strong class="role">The 1st Hellenic Robotics Forum (HRF 2026)</strong>, <span class="org">Hellenic Robotics Center of Excellence (HERON)</span>
+      </div>
+    </div>
+    <div class="timeline-row">
+      <div class="timeline-date">Chania, Greece<br>Apr 2026</div>
+      <div class="timeline-content">
+        <strong class="role">17th ECE Student Conference of Greece</strong>, <span class="org">Technical University of Crete</span>
+      </div>
+    </div>
+  </details>
+
+  <!-- 6. ACADEMIC ACTIVITIES & TRAINING -->
+  <details id="training" class="section-block" open>
+    <summary>Academic Activities &amp; Training</summary>
+
+    <div class="timeline-row">
+      <div class="timeline-date">Aug 2026</div>
+      <div class="timeline-content"><strong class="role">Machine Learning Specialization</strong>, <span class="org">DeepLearning.AI / Stanford Online</span></div>
+    </div>
+    <div class="timeline-row">
+      <div class="timeline-date">Jul 2026</div>
+      <div class="timeline-content"><strong class="role">Databricks Data Engineer Learning Plan</strong>, <span class="org">Databricks</span></div>
+    </div>
+    <div class="timeline-row">
+      <div class="timeline-date">Jul 2026</div>
+      <div class="timeline-content"><strong class="role">Spark and Python for Big Data with PySpark</strong>, <span class="org">Udemy</span></div>
+    </div>
+    <div class="timeline-row">
+      <div class="timeline-date">Jul 2026</div>
+      <div class="timeline-content"><strong class="role">1st HERON Summer School on Robotics &amp; AI</strong>, <span class="org">HERON Center of Excellence</span></div>
+    </div>
+    <div class="timeline-row">
+      <div class="timeline-date">Jul 2023 –<br>Dec 2023</div>
+      <div class="timeline-content"><strong class="role">Ασφάλεια Δεδομένων – Κυβερνοασφάλεια</strong>, <span class="org">University of Patras</span></div>
+    </div>
+  </details>
+
+  <!-- 7. COMPETITIONS -->
+  <details id="competitions" class="section-block" open>
+    <summary>Competitions</summary>
+
+    <div class="timeline-row">
+      <div class="timeline-date">2023 – 2024</div>
+      <div class="timeline-content">
+        <strong class="role">Competitive Cybersecurity &amp; CTF Player</strong> &mdash; competed in 8+ international Capture The Flag (CTF) competitions across binary exploitation, reverse engineering, cryptography, web security, and OSINT. Achieved top-tier global rankings, including 16th place at n00bzCTF 2024 and 27th place at HTB University CTF 2023, while also competing in Google CTF 2024. (<a href="ctfs/index.html">Full competition rankings</a>)
+      </div>
+    </div>
+
+    <div class="timeline-row">
+      <div class="timeline-date">Detroit, 2018</div>
+      <div class="timeline-content">
+        <strong class="role">FIRST Robotics Team Representing Greece</strong> &mdash; represented Greece at the FIRST Lego League World Championship after winning 1st place nationally. Contributed to the design and development of an innovative water purification solution.<br>
+        <strong>Achievement:</strong> 1st Place, Panhellenic FIRST Lego League &mdash; Qualified for World Championship.
+      </div>
+    </div>
+  </details>
+
+  <!-- 8. LANGUAGES -->
+  <details id="languages" class="section-block" open>
+    <summary>Languages</summary>
+
+    <div class="kv-row">
+      <div class="kv-label">English</div>
+      <div>C2 Proficiency (ECPE) | University of Michigan</div>
+    </div>
+    <div class="kv-row">
+      <div class="kv-label">French</div>
+      <div>C1 | Université de Paris – Sorbonne</div>
+    </div>
+  </details>
+
+</body>
+</html>

@@ -1,0 +1,235 @@
+:root {
+  --bg-color: #ffffff;
+  --text-color: #222222;
+  --muted-color: #888888;
+  --link-color: #1772d0;
+  --link-hover: #f09228;
+  --border-color: #eeeeee;
+  --header-border: #e0e0e0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 15px;
+  line-height: 1.65;
+  color: var(--text-color);
+  background-color: var(--bg-color);
+  max-width: 840px;
+  margin: 0 auto;
+  padding: 40px 24px 80px;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: var(--link-color);
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+a:hover {
+  color: var(--link-hover);
+  text-decoration: none;
+}
+
+/* Header */
+header {
+  margin-bottom: 36px;
+}
+
+header h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin: 0 0 6px 0;
+  color: #111111;
+}
+
+.subtitle {
+  color: #555555;
+  font-size: 0.98rem;
+  margin: 0 0 12px 0;
+}
+
+.contact-links {
+  font-size: 0.94rem;
+  color: var(--muted-color);
+  margin-bottom: 14px;
+}
+
+.contact-links a {
+  font-weight: 500;
+}
+
+.sep {
+  margin: 0 8px;
+  color: #cccccc;
+}
+
+.top-nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 22px;
+  padding: 16px 0;
+  border-top: 1px solid var(--header-border);
+  border-bottom: 1px solid var(--header-border);
+  font-size: 1.08rem;
+}
+
+.top-nav a {
+  color: #333333;
+  font-weight: 600;
+  padding: 4px 0;
+}
+
+.top-nav a:hover {
+  color: var(--link-color);
+}
+
+.top-nav a.active {
+  color: var(--link-color);
+  font-size: 0.92rem;
+  font-weight: 500;
+}
+
+/* Collapsible Academic Sections (Matches Screenshot) */
+details.section-block {
+  margin-bottom: 34px;
+}
+
+details.section-block > summary {
+  list-style: none;
+  cursor: pointer;
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #111111;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--header-border);
+  margin-bottom: 6px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  user-select: none;
+}
+
+details.section-block > summary::-webkit-details-marker {
+  display: none;
+}
+
+details.section-block > summary::before {
+  content: "›";
+  display: inline-block;
+  font-size: 1.3rem;
+  font-weight: 400;
+  color: #666666;
+  width: 14px;
+  transition: transform 0.15s ease;
+}
+
+details.section-block[open] > summary::before {
+  transform: rotate(90deg);
+}
+
+/* Standard Non-Collapsible Heading (for subpages) */
+h2.section-heading {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #111111;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--header-border);
+  margin: 34px 0 6px 0;
+}
+
+/* Two-Column Timeline Rows (Matches Screenshot) */
+.timeline-row {
+  display: grid;
+  grid-template-columns: 115px 1fr;
+  gap: 20px;
+  padding: 15px 0;
+  border-bottom: 1px solid var(--border-color);
+  align-items: baseline;
+}
+
+.timeline-row:last-child {
+  border-bottom: none;
+}
+
+.timeline-date {
+  font-size: 0.88rem;
+  color: var(--muted-color);
+  line-height: 1.45;
+  font-variant-numeric: tabular-nums;
+}
+
+.timeline-content {
+  font-size: 0.96rem;
+  color: var(--text-color);
+  text-align: justify;
+  hyphens: auto;
+  -webkit-hyphens: auto;
+}
+
+.timeline-content strong.role {
+  font-weight: 700;
+  color: #111111;
+}
+
+.timeline-content .org {
+  color: #222222;
+}
+
+.timeline-bullets {
+  margin: 6px 0 0 0;
+  padding-left: 18px;
+  color: #333333;
+}
+
+.timeline-bullets li {
+  margin-bottom: 4px;
+}
+
+.tech-inline {
+  font-size: 0.86rem;
+  color: var(--muted-color);
+  font-weight: 500;
+}
+
+/* Key-Value Rows for Skills & Languages */
+.kv-row {
+  display: grid;
+  grid-template-columns: 175px 1fr;
+  gap: 16px;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--border-color);
+  font-size: 0.95rem;
+}
+
+.kv-row:last-child {
+  border-bottom: none;
+}
+
+.kv-label {
+  font-weight: 600;
+  color: #111111;
+}
+
+.section-footer-link {
+  margin-top: 12px;
+  font-size: 0.94rem;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 620px) {
+  .timeline-row,
+  .kv-row {
+    grid-template-columns: 1fr;
+    gap: 4px;
+  }
+  .timeline-date {
+    font-size: 0.84rem;
+  }
+}
