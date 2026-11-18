@@ -1,63 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
 :root {
-  --bg-color: #ffffff;
-  --text-color: #222222;
-  --muted-color: #888888;
-  --link-color: #1772d0;
-  --link-hover: #f09228;
-  --border-color: #eeeeee;
-  --header-border: #e0e0e0;
+  --bg-color: #fbfbfa;
+  --surface-hover: #f3f2ee;
+  --text-color: #2c2e33;
+  --heading-color: #111317;
+  --muted-color: #6e747e;
+  --link-color: #0b5cab;
+  --link-hover: #073e75;
+  --accent-subtle: rgba(11, 92, 171, 0.08);
+  --border-color: #eceae4;
+  --header-border: #dcd9d0;
+}
+
+body {
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: 15px;
+  line-height: 1.68;
+  color: var(--text-color);
+  background-color: var(--bg-color);
+  max-width: 820px;
+  margin: 0 auto;
+  padding: 56px 28px 96px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 * {
   box-sizing: border-box;
 }
 
-body {
-  font-family: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  font-size: 15px;
-  line-height: 1.65;
-  color: var(--text-color);
-  background-color: var(--bg-color);
-  max-width: 840px;
-  margin: 0 auto;
-  padding: 40px 24px 80px;
-  -webkit-font-smoothing: antialiased;
+html {
+  scroll-behavior: smooth;
+}
+
+::selection {
+  background: var(--accent-subtle);
+  color: var(--link-color);
 }
 
 a {
   color: var(--link-color);
   text-decoration: none;
-  transition: color 0.15s ease;
+  border-bottom: 1px solid transparent;
+  transition: color 0.16s ease, border-color 0.16s ease;
 }
 
 a:hover {
   color: var(--link-hover);
-  text-decoration: none;
+  border-bottom-color: currentColor;
 }
 
 /* Header */
 header {
-  margin-bottom: 36px;
+  margin-bottom: 44px;
 }
 
 header h1 {
-  font-size: 2rem;
+  font-size: 2.15rem;
   font-weight: 700;
-  letter-spacing: -0.02em;
-  margin: 0 0 6px 0;
-  color: #111111;
+  letter-spacing: -0.03em;
+  line-height: 1.2;
+  margin: 0 0 8px 0;
+  color: var(--heading-color);
 }
 
 .subtitle {
-  color: #555555;
-  font-size: 0.98rem;
-  margin: 0 0 12px 0;
+  color: var(--muted-color);
+  font-size: 1rem;
+  font-weight: 400;
+  margin: 0 0 14px 0;
 }
 
 .contact-links {
-  font-size: 0.94rem;
+  font-size: 0.92rem;
   color: var(--muted-color);
-  margin-bottom: 14px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2px;
 }
 
 .contact-links a {
@@ -66,24 +88,28 @@ header h1 {
 
 .sep {
   margin: 0 8px;
-  color: #cccccc;
+  color: #cbd0d6;
+  user-select: none;
 }
 
+/* Top Navigation */
 .top-nav {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 22px;
-  padding: 16px 0;
+  gap: 20px;
+  padding: 14px 0;
   border-top: 1px solid var(--header-border);
   border-bottom: 1px solid var(--header-border);
-  font-size: 1.08rem;
+  font-size: 0.96rem;
 }
 
 .top-nav a {
-  color: #333333;
-  font-weight: 600;
+  color: var(--text-color);
+  font-weight: 500;
   padding: 4px 0;
+  border-bottom: none;
+  position: relative;
 }
 
 .top-nav a:hover {
@@ -92,28 +118,42 @@ header h1 {
 
 .top-nav a.active {
   color: var(--link-color);
-  font-size: 0.92rem;
-  font-weight: 500;
+  background-color: var(--accent-subtle);
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 4px 11px;
+  border-radius: 999px;
+  transition: background-color 0.16s ease, color 0.16s ease;
 }
 
-/* Collapsible Academic Sections (Matches Screenshot) */
+.top-nav a.active:hover {
+  background-color: rgba(11, 92, 171, 0.14);
+}
+
+/* Collapsible Academic Sections */
 details.section-block {
-  margin-bottom: 34px;
+  margin-bottom: 40px;
 }
 
 details.section-block > summary {
   list-style: none;
   cursor: pointer;
-  font-size: 1.35rem;
+  font-size: 1.25rem;
   font-weight: 700;
-  color: #111111;
-  padding-bottom: 8px;
+  letter-spacing: -0.015em;
+  color: var(--heading-color);
+  padding-bottom: 10px;
   border-bottom: 1px solid var(--header-border);
-  margin-bottom: 6px;
+  margin-bottom: 8px;
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
   user-select: none;
+  transition: color 0.15s ease;
+}
+
+details.section-block > summary:hover {
+  color: var(--link-color);
 }
 
 details.section-block > summary::-webkit-details-marker {
@@ -122,36 +162,46 @@ details.section-block > summary::-webkit-details-marker {
 
 details.section-block > summary::before {
   content: "›";
-  display: inline-block;
-  font-size: 1.3rem;
-  font-weight: 400;
-  color: #666666;
-  width: 14px;
-  transition: transform 0.15s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--link-color);
+  width: 16px;
+  transition: transform 0.2s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 details.section-block[open] > summary::before {
   transform: rotate(90deg);
 }
 
-/* Standard Non-Collapsible Heading (for subpages) */
+/* Standard Non-Collapsible Heading */
 h2.section-heading {
-  font-size: 1.35rem;
+  font-size: 1.25rem;
   font-weight: 700;
-  color: #111111;
-  padding-bottom: 8px;
+  letter-spacing: -0.015em;
+  color: var(--heading-color);
+  padding-bottom: 10px;
   border-bottom: 1px solid var(--header-border);
-  margin: 34px 0 6px 0;
+  margin: 38px 0 8px 0;
 }
 
-/* Two-Column Timeline Rows (Matches Screenshot) */
+/* Two-Column Timeline Rows */
 .timeline-row {
   display: grid;
-  grid-template-columns: 115px 1fr;
-  gap: 20px;
-  padding: 15px 0;
+  grid-template-columns: 130px 1fr;
+  gap: 24px;
+  padding: 16px 10px;
+  margin: 0 -10px;
+  border-radius: 6px;
   border-bottom: 1px solid var(--border-color);
   align-items: baseline;
+  transition: background-color 0.15s ease;
+}
+
+.timeline-row:hover {
+  background-color: var(--surface-hover);
 }
 
 .timeline-row:last-child {
@@ -159,14 +209,20 @@ h2.section-heading {
 }
 
 .timeline-date {
-  font-size: 0.88rem;
+  font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.79rem;
   color: var(--muted-color);
-  line-height: 1.45;
+  line-height: 1.55;
   font-variant-numeric: tabular-nums;
 }
 
+.timeline-date strong {
+  color: var(--link-color);
+  font-weight: 600;
+}
+
 .timeline-content {
-  font-size: 0.96rem;
+  font-size: 0.95rem;
   color: var(--text-color);
   text-align: justify;
   hyphens: auto;
@@ -174,38 +230,54 @@ h2.section-heading {
 }
 
 .timeline-content strong.role {
-  font-weight: 700;
-  color: #111111;
+  font-weight: 600;
+  color: var(--heading-color);
 }
 
 .timeline-content .org {
-  color: #222222;
+  color: #4b515c;
+  font-weight: 500;
 }
 
 .timeline-bullets {
-  margin: 6px 0 0 0;
+  margin: 8px 0 0 0;
   padding-left: 18px;
-  color: #333333;
+  color: var(--text-color);
+  text-align: justify;
+  hyphens: auto;
+  -webkit-hyphens: auto;
 }
 
 .timeline-bullets li {
-  margin-bottom: 4px;
+  margin-bottom: 5px;
+}
+
+.timeline-bullets li::marker {
+  color: var(--link-color);
 }
 
 .tech-inline {
-  font-size: 0.86rem;
+  font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.8rem;
   color: var(--muted-color);
-  font-weight: 500;
+  font-weight: 400;
 }
 
 /* Key-Value Rows for Skills & Languages */
 .kv-row {
   display: grid;
-  grid-template-columns: 175px 1fr;
-  gap: 16px;
-  padding: 10px 0;
+  grid-template-columns: 185px 1fr;
+  gap: 18px;
+  padding: 12px 10px;
+  margin: 0 -10px;
+  border-radius: 6px;
   border-bottom: 1px solid var(--border-color);
-  font-size: 0.95rem;
+  font-size: 0.94rem;
+  transition: background-color 0.15s ease;
+}
+
+.kv-row:hover {
+  background-color: var(--surface-hover);
 }
 
 .kv-row:last-child {
@@ -214,22 +286,28 @@ h2.section-heading {
 
 .kv-label {
   font-weight: 600;
-  color: #111111;
+  color: var(--heading-color);
 }
 
 .section-footer-link {
-  margin-top: 12px;
-  font-size: 0.94rem;
+  margin-top: 14px;
+  font-size: 0.93rem;
+  font-weight: 500;
 }
 
 /* Mobile Responsiveness */
 @media (max-width: 620px) {
+  body {
+    padding: 36px 20px 64px;
+  }
   .timeline-row,
   .kv-row {
     grid-template-columns: 1fr;
-    gap: 4px;
+    gap: 5px;
+    padding: 14px 6px;
+    margin: 0 -6px;
   }
   .timeline-date {
-    font-size: 0.84rem;
+    font-size: 0.78rem;
   }
 }
