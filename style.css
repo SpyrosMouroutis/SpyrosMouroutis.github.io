@@ -116,12 +116,15 @@ header h1 {
 .top-nav a:hover {
   color: var(--link-color);
 }
-
-.top-nav .sep,
 .top-nav a.active {
-  display: none;
+  color: #1d4ed8;       /* Crisp academic blue matching your [Code] links */
+  font-weight: 600;
 }
 
+.top-nav a.active:hover {
+  color: #1e40af;       /* Slightly darker blue on hover */
+  text-decoration: underline;
+}
 /* Collapsible Academic Sections */
 details.section-block {
   margin-bottom: 40px;
@@ -182,7 +185,7 @@ h2.section-heading {
 /* Two-Column Timeline Rows */
 .timeline-row {
   display: grid;
-  grid-template-columns: 130px 1fr;
+  grid-template-columns: 147px 1fr;
   gap: 24px;
   padding: 16px 10px;
   margin: 0 -10px;
@@ -202,7 +205,7 @@ h2.section-heading {
 
 .timeline-date {
   font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
-  font-size: 0.79rem;
+  font-size: 0.80rem;
   color: var(--muted-color);
   line-height: 1.55;
   font-variant-numeric: tabular-nums;
